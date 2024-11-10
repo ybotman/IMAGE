@@ -1,0 +1,25 @@
+{
+  "name": "image",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "clear && npx eslint . --fix",
+    "format": "prettier --write .",
+    "prep": "npm run format && npm run lint && npm run build",
+    "check": "prettier --check . && eslint .",
+    "cleanall": "npm cache clean --force && rm -rf node_modules package-lock.json && npm install && depcheck && npm run prep"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  }
+}
